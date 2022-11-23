@@ -15,7 +15,7 @@ class NewTransaction extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(10),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             TextField(
               decoration: InputDecoration(labelText: 'Title'),
@@ -25,7 +25,7 @@ class NewTransaction extends StatelessWidget {
               decoration: InputDecoration(labelText: 'Amount'),
               controller: amountController,
             ),
-            ElevatedButton(
+            OutlinedButton(
                 onPressed: () {
                   addTransaction(titleController.text,
                       double.parse(amountController.text));
